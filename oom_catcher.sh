@@ -13,7 +13,7 @@ do
     if [ $elapsed_time -ge 30 ]; then
         # Check the log for entries from OOM-killer
         if grep -q "oom-killer" /var/log/syslog; then
-            echo "OOM-killer активирован. Останавливаем скрипт."
+            echo "OOM killer is activated. Stop the script."
             break  # Break the loop if an entry from OOM-killer is found
         fi
     fi
